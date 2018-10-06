@@ -12,7 +12,7 @@
 [ext_resource path="res://rotator.tscn" type="PackedScene" id=10]
 [ext_resource path="res://notGoomba.tscn" type="PackedScene" id=11]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 
