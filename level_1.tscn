@@ -1,259 +1,43 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://level_1.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://laval_floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://checkpoint.tscn" type="PackedScene" id=4]
-[ext_resource path="res://icecream.png" type="Texture" id=5]
-[ext_resource path="res://floor_1.res" type="TileSet" id=6]
-[ext_resource path="res://audios/AUD-20180212-WA0000.ogg" type="AudioStream" id=7]
-[ext_resource path="res://player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://floor_2.res" type="TileSet" id=9]
-[ext_resource path="res://floor_4.res" type="TileSet" id=10]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 140.163, 10 )
+[ext_resource path="res://laval_floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://checkpoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icecream.png" type="Texture" id=4]
+[ext_resource path="res://floor_1.res" type="TileSet" id=5]
+[ext_resource path="res://audios/AUD-20180212-WA0000.ogg" type="AudioStream" id=6]
+[ext_resource path="res://player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://floor_2.res" type="TileSet" id=8]
+[ext_resource path="res://floor_4.res" type="TileSet" id=9]
+[ext_resource path="res://rotator.tscn" type="PackedScene" id=10]
+[ext_resource path="res://notGoomba.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
-
-editor/display_folded = true
-position = Vector2( 132, 242 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="." index="1"]
-
-editor/display_folded = true
-position = Vector2( 710, 88 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D6" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." index="2"]
-
-editor/display_folded = true
-position = Vector2( 928.561, 473.974 )
-rotation = -1.57445
-scale = Vector2( 1.59393, 1 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D3" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D8" type="StaticBody2D" parent="." index="3"]
-
-editor/display_folded = true
-position = Vector2( 1466.56, 889.974 )
-rotation = -1.57445
-scale = Vector2( 1.59393, 1 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D8" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D10" type="StaticBody2D" parent="." index="4"]
-
-editor/display_folded = true
-position = Vector2( 2474.56, 875.974 )
-rotation = -1.57445
-scale = Vector2( 1.59393, 1 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D10" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D9" type="StaticBody2D" parent="." index="5"]
-
-editor/display_folded = true
-position = Vector2( 1600.45, 917.637 )
-rotation = -0.00562337
-scale = Vector2( 3.72503, 1 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D9" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D7" type="StaticBody2D" parent="." index="6"]
-
-editor/display_folded = true
-position = Vector2( 981.451, 503.044 )
-rotation = -0.00549745
-scale = Vector2( 1.96612, 1 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="StaticBody2D7" index="0"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 104, 6 )
-scale = Vector2( 4.25, 0.5 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" index="1"]
-
-position = Vector2( 100, 3.5 )
-scale = Vector2( 1, 1.26923 )
-shape = SubResource( 1 )
-
-[node name="lava" parent="." index="7" instance=ExtResource( 3 )]
+[node name="lava" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 1974.75, 696 )
 scale = Vector2( 8.75, 6.625 )
 
-[node name="checkpoint" parent="." index="8" instance=ExtResource( 4 )]
+[node name="checkpoint" parent="." index="1" instance=ExtResource( 3 )]
 
 editor/display_folded = true
-position = Vector2( 850.272, -13.813 )
+position = Vector2( 1280, -90 )
 scale = Vector2( 2.7874, 2.5422 )
 
 [node name="Sprite" type="Sprite" parent="checkpoint" index="1"]
 
 position = Vector2( 0.63327, -0.797125 )
 scale = Vector2( 1.41153, 1.94476 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
-[node name="TileMap" type="TileMap" parent="." index="9"]
+[node name="TileMap" type="TileMap" parent="." index="2"]
 
+position = Vector2( -42, 0 )
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -268,24 +52,46 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 524294, 0, 0, 524296, 0, 0 )
+tile_data = PoolIntArray( 393255, 0, 0, 393261, 0, 0, 524294, 0, 0, 524296, 0, 0 )
 _sections_unfolded = [ "Cell", "Collision" ]
 
-[node name="YourConflict" type="AudioStreamPlayer" parent="." index="10"]
+[node name="YourConflict" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="player" parent="." index="11" instance=ExtResource( 8 )]
+[node name="player" parent="." index="4" instance=ExtResource( 7 )]
 
-position = Vector2( 264.678, 117.104 )
+position = Vector2( 3240, 100 )
 
-[node name="Floor2" type="TileMap" parent="." index="12"]
+[node name="Floor2" type="TileMap" parent="." index="5"]
 
+position = Vector2( -30, 3 )
+mode = 0
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 393256, 0, 0, 393257, 0, 0, 393258, 0, 0, 393259, 0, 0, 393260, 0, 0, 393262, 0, 0, 393263, 0, 0, 393265, 0, 0, 393267, 0, 0, 393268, 0, 0, 393269, 0, 0, 393270, 0, 0, 393271, 0, 0, 393272, 0, 0, 393273, 0, 0, 393274, 0, 0, 393276, 0, 0, 393277, 0, 0, 393278, 0, 0, 393279, 0, 0, 393280, 0, 0, 393281, 0, 0, 393282, 0, 0, 393283, 0, 0, 393284, 0, 0, 393285, 0, 0, 393286, 0, 0, 393287, 0, 0, 393288, 0, 0, 393289, 0, 0, 393290, 0, 0, 524295, 0, 0, 524297, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917533, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 917537, 0, 0, 917538, 0, 0, 917539, 0, 0, 917540, 0, 0, 917541, 0, 0 )
+
+[node name="Floor4" type="TileMap" parent="." index="6"]
+
+position = Vector2( -35, -140 )
 mode = 0
 tile_set = ExtResource( 9 )
 cell_size = Vector2( 64, 64 )
@@ -302,34 +108,13 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 524293, 0, 0, 524295, 0, 0, 524297, 0, 0 )
+tile_data = PoolIntArray( 196608, 0, 0, 196625, 0, 0, 196631, 0, 0, 262144, 0, 0, 262161, 0, 0, 262167, 0, 0, 327697, 0, 0, 327703, 0, 0, 393233, 0, 0, 393239, 0, 0, 458769, 0, 0, 458775, 0, 0, 524305, 0, 0, 524311, 0, 0, 589841, 0, 0, 589847, 0, 0, 589863, 0, 0, 655383, 0, 0, 655399, 0, 0, 720919, 0, 0, 720935, 0, 0, 786455, 0, 0, 786471, 0, 0, 851991, 0, 0, 852007, 0, 0, 917527, 0, 0, 917543, 0, 0, 983063, 0, 0, 983079, 0, 0 )
 
-[node name="Floor4" type="TileMap" parent="." index="13"]
-
-position = Vector2( -35, -120 )
-mode = 0
-tile_set = ExtResource( 10 )
-cell_size = Vector2( 64, 64 )
-cell_quadrant_size = 16
-cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
-format = 1
-tile_data = PoolIntArray( 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 524299, 0, 0, 589835, 0, 0 )
-
-[node name="floor5" type="TileMap" parent="." index="14"]
+[node name="floor5" type="TileMap" parent="." index="7"]
 
 position = Vector2( -3, -153 )
 mode = 0
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 9 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -345,5 +130,54 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 589829, 0, 0, 655365, 0, 0 )
+
+[node name="rotator" parent="." index="8" instance=ExtResource( 10 )]
+
+position = Vector2( 888.829, 242.769 )
+rotation = 2.69634
+
+[node name="rotator4" parent="." index="9" instance=ExtResource( 10 )]
+
+position = Vector2( 3701.78, 195.641 )
+rotation = 0.980106
+
+[node name="rotator2" parent="." index="10" instance=ExtResource( 10 )]
+
+position = Vector2( 1640.11, 368.558 )
+rotation = 3.10271
+
+[node name="rotator3" parent="." index="11" instance=ExtResource( 10 )]
+
+position = Vector2( 1981.64, 355.779 )
+rotation = 3.66379
+
+[node name="rotator5" parent="." index="12" instance=ExtResource( 10 )]
+
+position = Vector2( 2336.96, 374.285 )
+rotation = 3.66379
+
+[node name="notGoomba" parent="." index="13" instance=ExtResource( 11 )]
+
+position = Vector2( 2650, 340 )
+
+[node name="floor_21" type="TileMap" parent="." index="14"]
+
+mode = 0
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
 
 
