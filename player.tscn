@@ -89,9 +89,10 @@ animation = "Right"
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="5"]
 
-enabled = false
+position = Vector2( -0.970596, 30.7357 )
+enabled = true
 exclude_parent = true
-cast_to = Vector2( 0, 50 )
+cast_to = Vector2( 0, 20 )
 collision_mask = 1
 
 [node name="up" type="Position2D" parent="." index="6"]

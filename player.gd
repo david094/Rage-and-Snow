@@ -32,8 +32,6 @@ func _input(event):
 		$SpriteDeth.play("Right")
 	elif event.is_action_pressed("ui_up"):
 		dir_s = "up"
-	elif event.is_action_pressed("ui_down"):
-		dir_s = "down"
 	
 
 func _process(delta):
@@ -53,9 +51,6 @@ func disparo():
 	elif(dir_s == "up"):
 		dir = Vector2(0,-1)
 		bola_pos = get_node(bola_up)
-	elif(dir_s == "down"):
-		dir = Vector2(0,1)
-		bola_pos = get_node(bola_down)
 	
 	var bola = bola_escena.instance()  
 	bola.set_global_position(bola_pos.get_global_position())
