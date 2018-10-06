@@ -85,4 +85,11 @@ scale = Vector2( 1.52652, 1.4976 )
 frames = SubResource( 2 )
 animation = "Right"
 
+[node name="RayCast2D" type="RayCast2D" parent="." index="5"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 1
+
 

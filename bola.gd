@@ -4,6 +4,7 @@ export (int) var vida
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	set_meta("bola",true)
 	pass
 
 func disparo(vel_bola,dir):

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lava_spr_strip45.png-7c83dfa3643f6285837a1159c23a153d.stex"
+path="res://.import/floor_22.png-fccd8ac53c9dad6955f33325a7f38e05.stex"
 
 [deps]
 
-source_file="res://lava_spr_strip45.png"
-dest_files=[ "res://.import/lava_spr_strip45.png-7c83dfa3643f6285837a1159c23a153d.stex" ]
+source_file="res://images/floor_22.png"
+dest_files=[ "res://.import/floor_22.png-fccd8ac53c9dad6955f33325a7f38e05.stex" ]
 
 [params]
 
@@ -15,8 +15,8 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=1
-flags/filter=false
+flags/repeat=0
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -25,5 +25,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

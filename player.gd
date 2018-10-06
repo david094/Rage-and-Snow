@@ -17,15 +17,18 @@ func _ready():
 	pass
 
 func _input(event):
-	if event.is_action_released("ui_select"):
+	if event.is_action_released("long_shoot"):
+		vel_bola = 500
+		disparo()
+	if event.is_action_pressed("short_shoot"):
+		vel_bola = 25
 		disparo()
 	if event.is_action_pressed("ui_left"):
 		dir_s = "l"
 	elif event.is_action_pressed("ui_right"):
 		dir_s = "r"
-
-	else: 
-		$SpriteDeth.stop()
+		$SpriteDeth.play("Right")
+	
 
 func _process(delta):
 	if Input.is_action_pressed("ui_left"):
@@ -55,6 +58,15 @@ const GRAVEDAD = 20
 var motion = Vector2()
 
 func _physics_process(delta):
+	#empujar objeto debajo
+	if $RayCast2D.is_colliding():
+		var col = $RayCast2D.get_collider()
+		if col.has_meta("rotator"):
+			if col.global_position.x-self.global_position.x < 0:
+				col.apply_impulse($RayCast2D.get_collision_point(),Vector2(0,0.1))
+			else:
+				col.apply_impulse($RayCast2D.get_collision_point(),Vector2(0,-0.1))
+
 	motion.y += GRAVEDAD
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
@@ -64,9 +76,10 @@ func _physics_process(delta):
 		motion.x = 0
 	
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("ui_select"):
 			motion.y = ALTURA
 	motion = move_and_slide(motion,UP)
+	
 	pass
 	
 #reset player to checkpoint
