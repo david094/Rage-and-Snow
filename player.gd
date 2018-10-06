@@ -1,11 +1,15 @@
 extends KinematicBody2D
+
 export (PackedScene) var bola_escena
-export (NodePath) var bola_spawn
+export (NodePath) var bola_izq
+export (NodePath) var bola_der
 export (int) var vel_bola
-export (Vector2) var dir
 
-onready var bola_pos = get_node(bola_spawn)
+#shoot direction
+onready var dir_s = "r"
+onready var bola_pos = get_node(bola_der)
 
+var dir = Vector2(1,0)
 #checkpoint 
 var checkpoint = null
 
@@ -15,10 +19,22 @@ func _ready():
 func _input(event):
 	if event.is_action_released("ui_select"):
 		disparo()
-	
+	elif event.is_action_released("ui_accept"):
+		reset_to_checkpoint()
+	elif event.is_action_pressed("ui_left"):
+		dir_s = "l"
+	elif event.is_action_pressed("ui_right"):
+		dir_s = "r"
 
 func disparo():
-	dir = Vector2(1,0)
+	
+	if(dir_s == "l"):
+		dir = Vector2(-1,0)
+		bola_pos = get_node(bola_izq)
+	else:
+		dir = Vector2(1,0)
+		bola_pos = get_node(bola_der)
+	
 	var bola = bola_escena.instance()
 	bola.set_global_position(bola_pos.get_global_position())
 	bola.disparo(vel_bola,dir)
@@ -50,3 +66,4 @@ func _physics_process(delta):
 func reset_to_checkpoint():
 	if checkpoint != null:
 		set_global_position(checkpoint.get_global_position())
+	
