@@ -1,5 +1,4 @@
 extends KinematicBody2D
-
 export (PackedScene) var bola_escena
 export (NodePath) var bola_spawn
 export (int) var vel_bola
@@ -16,8 +15,7 @@ func _ready():
 func _input(event):
 	if event.is_action_released("ui_select"):
 		disparo()
-	if event.is_action_released("ui_accept"):
-		reset_to_checkpoint()
+	
 
 func disparo():
 	dir = Vector2(1,0)
@@ -52,4 +50,3 @@ func _physics_process(delta):
 func reset_to_checkpoint():
 	if checkpoint != null:
 		set_global_position(checkpoint.get_global_position())
-	

@@ -1,41 +1,46 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://lava_spr_strip45.png" type="Texture" id=1]
+[ext_resource path="res://Area2D.gd" type="Script" id=1]
+[ext_resource path="res://lava_spr_strip45.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.0501, 9.1945 )
+extents = Vector2( 7.23214, 12.3773 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
-position = Vector2( 22.5, 37.5 )
+_sections_unfolded = [ "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Area2D" type="Area2D" parent="." index="0"]
 
-position = Vector2( 53, 27.25 )
-texture = ExtResource( 1 )
+scale = Vector2( 1.7, 0.9 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 0.0155144, 0.203093 )
+scale = Vector2( 0.646778, 1.33283 )
+texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 100, 50 )
 _sections_unfolded = [ "Region" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
 
-position = Vector2( 0.139168, 0.0360954 )
-scale = Vector2( 1.56641, 0.781763 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
-
-position = Vector2( -0.159607, 0.247849 )
-scale = Vector2( 3.18404, 3.47526 )
+position = Vector2( 0.147062, 0.0731025 )
+scale = Vector2( 4.48414, 2.70886 )
 shape = SubResource( 1 )
 
 
