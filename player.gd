@@ -19,8 +19,6 @@ func _ready():
 func _input(event):
 	if event.is_action_released("ui_select"):
 		disparo()
-	elif event.is_action_released("ui_accept"):
-		reset_to_checkpoint()
 	elif event.is_action_pressed("ui_left"):
 		dir_s = "l"
 	elif event.is_action_pressed("ui_right"):
