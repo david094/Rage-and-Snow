@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Warney.png-68bc3df5672390e388a5ffb2529fb05c.stex"
+path="res://.import/Warney.png-1a34a0df5ddc3bcca656e7e401fd128e.stex"
 
 [deps]
 
-source_file="res://Warney.png"
-dest_files=[ "res://.import/Warney.png-68bc3df5672390e388a5ffb2529fb05c.stex" ]
+source_file="res://images/Warney.png"
+dest_files=[ "res://.import/Warney.png-1a34a0df5ddc3bcca656e7e401fd128e.stex" ]
 
 [params]
 

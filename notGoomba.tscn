@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://notGoomba.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://enemigo.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -13,7 +13,7 @@ radius = 30.0
 custom_solver_bias = 0.0
 extents = Vector2( 50, 50 )
 
-[node name="notGoomba" type="KinematicBody2D"]
+[node name="notGoomba" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
