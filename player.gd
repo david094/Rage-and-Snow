@@ -50,6 +50,15 @@ const GRAVEDAD = 20
 var motion = Vector2()
 
 func _physics_process(delta):
+	#empujar objeto debajo
+	if $RayCast2D.is_colliding():
+		var col = $RayCast2D.get_collider()
+		if col.has_meta("rotator"):
+			if col.global_position.x-self.global_position.x < 0:
+				col.apply_impulse($RayCast2D.get_collision_point(),Vector2(0,0.1))
+			else:
+				col.apply_impulse($RayCast2D.get_collision_point(),Vector2(0,-0.1))
+
 	motion.y += GRAVEDAD
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
@@ -62,6 +71,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = ALTURA
 	motion = move_and_slide(motion,UP)
+	
 	pass
 	
 #reset player to checkpoint

@@ -2,10 +2,10 @@
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://bola.tscn" type="PackedScene" id=2]
-[ext_resource path="res://snowdeth king 02 - Left.png" type="Texture" id=3]
-[ext_resource path="res://snowdeth king  -  Left.png" type="Texture" id=4]
-[ext_resource path="res://snowdeth king 1.png" type="Texture" id=5]
-[ext_resource path="res://snowdeth king 2.png" type="Texture" id=6]
+[ext_resource path="res://snowdeth king 1.png" type="Texture" id=3]
+[ext_resource path="res://snowdeth king 2.png" type="Texture" id=4]
+[ext_resource path="res://snowdeth king 02 - Left.png" type="Texture" id=5]
+[ext_resource path="res://snowdeth king  -  Left.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -17,12 +17,12 @@ radius = 31.7404
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "Left",
+"name": "Right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "Right",
+"name": "Left",
 "speed": 5.0
 } ]
 
@@ -84,5 +84,13 @@ position = Vector2( -3.15152, 3.07684 )
 scale = Vector2( 1.52652, 1.4976 )
 frames = SubResource( 2 )
 animation = "Right"
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="5"]
+
+position = Vector2( -0.970596, 30.7357 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 1
 
 
