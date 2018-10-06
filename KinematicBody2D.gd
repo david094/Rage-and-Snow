@@ -7,13 +7,17 @@ export (Vector2) var dir
 
 onready var bola_pos = get_node(bola_spawn)
 
+#checkpoint 
+var checkpoint = null
+
 func _ready():
 	pass
-
 
 func _input(event):
 	if event.is_action_released("ui_select"):
 		disparo()
+	if event.is_action_released("ui_accept"):
+		reset_to_checkpoint()
 
 func disparo():
 	dir = Vector2(1,0)
@@ -44,3 +48,9 @@ func _physics_process(delta):
 			motion.y = ALTURA
 	motion = move_and_slide(motion,UP)
 	pass
+	
+#reset player to checkpoint
+func reset_to_checkpoint():
+	if checkpoint != null:
+		set_global_position(checkpoint.get_global_position())
+	
