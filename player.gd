@@ -3,6 +3,8 @@ extends KinematicBody2D
 export (PackedScene) var bola_escena
 export (NodePath) var bola_izq
 export (NodePath) var bola_der
+export (NodePath) var bola_up
+export (NodePath) var bola_down
 export (int) var vel_bola
 
 #shoot direction
@@ -29,6 +31,10 @@ func _input(event):
 	elif event.is_action_pressed("ui_right"):
 		dir_s = "r"
 		$SpriteDeth.play("Right")
+	elif event.is_action_pressed("ui_up"):
+		dir_s = "up"
+	elif event.is_action_pressed("ui_down"):
+		dir_s = "down"
 	
 
 func disparo():
@@ -36,9 +42,15 @@ func disparo():
 	if(dir_s == "l"):
 		dir = Vector2(-1,0)
 		bola_pos = get_node(bola_izq)
-	else:
+	elif(dir_s == "r"):
 		dir = Vector2(1,0)
 		bola_pos = get_node(bola_der)
+	elif(dir_s == "up"):
+		dir = Vector2(0,-1)
+		bola_pos = get_node(bola_up)
+	elif(dir_s == "down"):
+		dir = Vector2(0,1)
+		bola_pos = get_node(bola_down)
 	
 	var bola = bola_escena.instance()  
 	bola.set_global_position(bola_pos.get_global_position())
