@@ -1,19 +1,21 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://lava_spr_strip45.png" type="Texture" id=1]
+[ext_resource path="res://rotatorRB.gd" type="Script" id=1]
+[ext_resource path="res://lava_spr_strip45.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 100, 10 )
+extents = Vector2( 100.123, 10 )
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 5.0
 
-[node name="rotator" type="Node2D"]
+[node name="rotator" type="Node2D" index="0"]
 
+position = Vector2( -0.35849, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -33,7 +35,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
-mass = 1.0
+mass = 5.0
 friction = 1.0
 bounce = 0.0
 gravity_scale = 1.0
@@ -47,17 +49,18 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-_sections_unfolded = [ "Pickable", "Transform", "Z Index" ]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Pickable", "Transform", "Z Index" ]
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D" index="0"]
 
 position = Vector2( -0.0482826, 0.0204536 )
 scale = Vector2( 0.277965, 1.2399 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
 
@@ -71,6 +74,6 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 
