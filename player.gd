@@ -19,12 +19,14 @@ func _ready():
 func _input(event):
 	if event.is_action_released("ui_select"):
 		disparo()
-	elif event.is_action_released("ui_accept"):
-		reset_to_checkpoint()
-	elif event.is_action_pressed("ui_left"):
+	if event.is_action_pressed("ui_left"):
 		dir_s = "l"
+		$SpriteDeth.play("Left")
 	elif event.is_action_pressed("ui_right"):
 		dir_s = "r"
+		$SpriteDeth.play("Right")
+	else: 
+		$SpriteDeth.stop()
 
 func disparo():
 	
@@ -35,7 +37,7 @@ func disparo():
 		dir = Vector2(1,0)
 		bola_pos = get_node(bola_der)
 	
-	var bola = bola_escena.instance()
+	var bola = bola_escena.instance()  
 	bola.set_global_position(bola_pos.get_global_position())
 	bola.disparo(vel_bola,dir)
 	get_parent().add_child(bola)
