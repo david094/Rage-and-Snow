@@ -42,13 +42,13 @@ func _process(delta):
 
 func disparo():
 	
-	if(dir_s == "l"):
+	if (dir_s == "l"):
 		dir = Vector2(-1,0)
 		bola_pos = get_node(bola_izq)
-	elif(dir_s == "r"):
+	elif (dir_s == "r"):
 		dir = Vector2(1,0)
 		bola_pos = get_node(bola_der)
-	elif(dir_s == "up"):
+	elif (dir_s == "up"):
 		dir = Vector2(0,-1)
 		bola_pos = get_node(bola_up)
 	

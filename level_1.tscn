@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://level_1.gd" type="Script" id=1]
 [ext_resource path="res://laval_floor.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://floor_4.res" type="TileSet" id=9]
 [ext_resource path="res://rotator.tscn" type="PackedScene" id=10]
 [ext_resource path="res://notGoomba.tscn" type="PackedScene" id=11]
+[ext_resource path="res://vertical_floor.res" type="TileSet" id=12]
+[ext_resource path="res://scenes/warney.tscn" type="PackedScene" id=13]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -66,7 +68,7 @@ bus = "Master"
 
 [node name="player" parent="." index="4" instance=ExtResource( 7 )]
 
-position = Vector2( 3230, 250 )
+position = Vector2( 4030, -70 )
 bola_up = NodePath("up")
 bola_down = NodePath("down")
 
@@ -110,7 +112,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196608, 0, 0, 196625, 0, 0, 196631, 0, 0, 196674, 0, 0, 262144, 0, 0, 262161, 0, 0, 262167, 0, 0, 262210, 0, 0, 327697, 0, 0, 327703, 0, 0, 327746, 0, 0, 393233, 0, 0, 393239, 0, 0, 393282, 0, 0, 458769, 0, 0, 458775, 0, 0, 458818, 0, 0, 524305, 0, 0, 524311, 0, 0, 589841, 0, 0, 589847, 0, 0, 589863, 0, 0, 655383, 0, 0, 655399, 0, 0, 720919, 0, 0, 720935, 0, 0, 786455, 0, 0, 786471, 0, 0, 851991, 0, 0, 852007, 0, 0, 917527, 0, 0, 917543, 0, 0, 983063, 0, 0, 983079, 0, 0 )
+tile_data = PoolIntArray( -130989, 0, 0, -65453, 0, 0, 83, 0, 0, 65619, 0, 0, 131155, 0, 0, 196608, 0, 0, 196625, 0, 0, 196631, 0, 0, 196674, 0, 0, 196691, 0, 0, 262144, 0, 0, 262161, 0, 0, 262167, 0, 0, 262210, 0, 0, 262227, 0, 0, 327697, 0, 0, 327703, 0, 0, 327746, 0, 0, 393233, 0, 0, 393239, 0, 0, 393282, 0, 0, 458769, 0, 0, 458775, 0, 0, 458818, 0, 0, 524305, 0, 0, 524311, 0, 0, 589841, 0, 0, 589847, 0, 0, 589863, 0, 0, 655383, 0, 0, 655399, 0, 0, 720919, 0, 0, 720935, 0, 0, 786455, 0, 0, 786471, 0, 0, 851991, 0, 0, 852007, 0, 0, 917527, 0, 0, 917543, 0, 0, 983063, 0, 0, 983079, 0, 0 )
 
 [node name="floor5" type="TileMap" parent="." index="7"]
 
@@ -131,7 +133,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 589829, 0, 0, 655365, 0, 0 )
+tile_data = PoolIntArray( -196510, 0, 0, -130974, 0, 0, -65438, 0, 0, 98, 0, 0, 65634, 0, 0, 131170, 0, 0, 196706, 0, 0, 262242, 0, 0, 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 589829, 0, 0, 655365, 0, 0 )
 
 [node name="rotator" parent="." index="8" instance=ExtResource( 10 )]
 
@@ -164,7 +166,7 @@ position = Vector2( 2650, 340 )
 
 [node name="floor_21" type="TileMap" parent="." index="14"]
 
-mode = 0
+mode = 1
 tile_set = ExtResource( 8 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
@@ -180,6 +182,32 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+tile_data = PoolIntArray( -6160285, 0, 0, -6094750, 0, 0, -6029215, 0, 0, -5963680, 0, 0, -5898145, 0, 0, -5832610, 0, 0, -5767075, 0, 0, -5701540, 0, 0, -5636019, 0, 0, -5636005, 0, 0, -5570484, 0, 0, -5570470, 0, 0, -5504949, 0, 0, -5504935, 0, 0, -5439414, 0, 0, -5439400, 0, 0, -5373879, 0, 0, -5373865, 0, 0, -5308330, 0, 0, -5242795, 0, 0, -524264, 0, 0, -458729, 0, 0, -393194, 0, 0, -327659, 0, 0, -262124, 0, 0, -196589, 0, 0, -131054, 0, 0 )
+
+[node name="VerticalFloor" type="TileMap" parent="." index="15"]
+
+position = Vector2( -1, -45 )
+mode = 1
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -5242807, 0, 0, -5177271, 0, 0, -5111735, 0, 0, -5046199, 0, 0, -4980663, 0, 0, -4915127, 0, 0, -4849591, 0, 0, -4784055, 0, 0, -4718519, 0, 0, 72, 0, 0 )
+
+[node name="Warney" parent="." index="16" instance=ExtResource( 13 )]
+
+position = Vector2( 6170, 50 )
+scale = Vector2( 1.4375, 1.4375 )
 
 

@@ -8,6 +8,7 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	#$YourConflict.play()
+	#$Warney.flip_h()
 	pass
 
 #func _process(delta):

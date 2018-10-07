@@ -1,25 +1,33 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://images/Warney-Right.png" type="Texture" id=1]
-[ext_resource path="res://images/Warney.png" type="Texture" id=2]
-
-
+[ext_resource path="res://scenes/warney.gd" type="Script" id=1]
+[ext_resource path="res://images/Warney-Right.png" type="Texture" id=2]
+[ext_resource path="res://images/Warney.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 16.6667
+height = 16.6667
+
 [node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+dist_min = 400
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
@@ -28,14 +36,17 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
 
-build_mode = 0
-polygon = PoolVector2Array( 30, -40, 0, -30, -10, -20, -30, 20, -30, 40, -50, 10, -50, 20, -40, 50, -30, 50, -30, 60, 30, 60, 30, 20, 40, -20, 30, -20, 20, -20, 20, -30 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="1"]
-
+position = Vector2( 10, 20 )
 frames = SubResource( 1 )
 animation = "default"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
+
+position = Vector2( 10, 40 )
+scale = Vector2( 2.26271, 2 )
+shape = SubResource( 2 )
 
 
