@@ -17,6 +17,8 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	set_meta("goomba",true)
+	# Initialization 
+	$areaAtaque.connect("body_entered", self, "ataque")
 	pass
 
 func _process(delta):
@@ -52,3 +54,8 @@ func _physics_process(delta):
 		#def_t --> x
 		#0.9*def_t / defrost
 		$ColorRect.color.a = 0.9
+		
+func ataque(body):
+	if (body.has_method("reset_to_checkpoint") && not congelado):
+		body.reset_to_checkpoint()
+	
