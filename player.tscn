@@ -1,18 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://bola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/bola.tscn" type="PackedScene" id=2]
 [ext_resource path="res://snowdeth king 02 - Left.png" type="Texture" id=3]
 [ext_resource path="res://snowdeth king  -  Left.png" type="Texture" id=4]
 [ext_resource path="res://snowdeth king 1.png" type="Texture" id=5]
 [ext_resource path="res://snowdeth king 2.png" type="Texture" id=6]
 
-[sub_resource type="CircleShape2D" id=1]
-
-custom_solver_bias = 0.0
-radius = 31.7404
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
@@ -40,21 +35,17 @@ bola_up = null
 bola_down = null
 vel_bola = 500
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-shape = SubResource( 1 )
-
-[node name="left" type="Position2D" parent="." index="1"]
+[node name="left" type="Position2D" parent="." index="0"]
 
 position = Vector2( -43, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="right" type="Position2D" parent="." index="2"]
+[node name="right" type="Position2D" parent="." index="1"]
 
 position = Vector2( 43, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
 
 position = Vector2( 43, 0 )
 anchor_mode = 1
@@ -80,14 +71,14 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="SpriteDeth" type="AnimatedSprite" parent="." index="4"]
+[node name="SpriteDeth" type="AnimatedSprite" parent="." index="3"]
 
 position = Vector2( -3.15152, 3.07684 )
 scale = Vector2( 1.52652, 1.4976 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "Right"
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="5"]
+[node name="RayCast2D" type="RayCast2D" parent="." index="4"]
 
 position = Vector2( -0.970596, 30.7357 )
 enabled = true
@@ -95,12 +86,17 @@ exclude_parent = true
 cast_to = Vector2( 0, 20 )
 collision_mask = 1
 
-[node name="up" type="Position2D" parent="." index="6"]
+[node name="up" type="Position2D" parent="." index="5"]
 
 position = Vector2( 0, -50 )
 
-[node name="down" type="Position2D" parent="." index="7"]
+[node name="down" type="Position2D" parent="." index="6"]
 
 position = Vector2( 0, 50 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="7"]
+
+build_mode = 0
+polygon = PoolVector2Array( -27.7944, -14.9265, -15.7747, -32.9561, -0.320717, -36.8195, 11.2697, -34.2439, 18.1382, -25.2291, 20.7138, -15.785, 19.8553, 6.53736, 27.5822, 4.82025, 31.0165, 6.10808, 32.7336, 10.4008, 23.2895, 15.1229, 29.2993, 17.6985, 22.8602, 27.5719, 11.2697, 31.0061, -8.90624, 33.1525, -22.6431, 24.567, -31.2286, 22.4206, -33.8043, 6.10808 )
 
 

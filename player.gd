@@ -59,7 +59,7 @@ func disparo():
 	
 const UP = Vector2(0,-1)
 const SPEED = 200
-const ALTURA = -550
+const ALTURA = -450
 const GRAVEDAD = 20
 
 var motion = Vector2()

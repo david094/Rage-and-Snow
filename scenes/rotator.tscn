@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 100.123, 10 )
+extents = Vector2( 28.3386, 7.95296 )
 
 [sub_resource type="CircleShape2D" id=2]
 
@@ -35,7 +35,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 mode = 0
-mass = 5.0
+mass = 120.0
 friction = 1.0
 bounce = 0.0
 gravity_scale = 1.0
@@ -56,11 +56,14 @@ _sections_unfolded = [ "Angular", "Applied Forces", "Linear", "Pickable", "Trans
 
 position = Vector2( 1.25008, 0.213274 )
 rotation = 1.5689
-scale = Vector2( 0.522862, 2.11316 )
+scale = Vector2( 0.4, 1 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 
+position = Vector2( 0.348907, -0.206414 )
+scale = Vector2( 1.68896, 0.841375 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]

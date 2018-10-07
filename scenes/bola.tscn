@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 6.5
+radius = 4.76213
 
 [sub_resource type="Curve" id=2]
 
@@ -88,7 +88,7 @@ vida = 10
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.566667, 0.433333 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

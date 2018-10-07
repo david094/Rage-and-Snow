@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icecream.png-61767f09db0f41d4be9dc87797fb14a0.stex"
+path="res://.import/stage1_tiles2.png-0f3a6bccec2a47b3a8a05e47adb49fd8.stex"
 
 [deps]
 
-source_file="res://icecream.png"
-dest_files=[ "res://.import/icecream.png-61767f09db0f41d4be9dc87797fb14a0.stex" ]
+source_file="res://images/stage1_tiles2.png"
+dest_files=[ "res://.import/stage1_tiles2.png-0f3a6bccec2a47b3a8a05e47adb49fd8.stex" ]
 
 [params]
 

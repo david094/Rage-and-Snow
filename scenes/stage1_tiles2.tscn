@@ -1,0 +1,131 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://images/stage1_tiles3.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 14.2853
+height = 46.4188
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Dona Flotante" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 33, 13, 95, 99 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Dona Flotante" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Dona Flotante/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -40, -30, -30, -30, -30, -40, 20, -40, 30, -30, 40, -30, 50, -10, 50, 0, 40, 30, 30, 30, 20, 50, -20, 50, -30, 30, -40, 30, -50, 10, -50, -10 )
+
+[node name="Caca" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 353, 16, 31, 96 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Caca" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caca/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Ascendente" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 213, 1, 58, 65 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ascendente" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ascendente/StaticBody2D" index="0"]
+
+position = Vector2( 0.274841, -0.924929 )
+rotation = 0.758265
+shape = SubResource( 1 )
+
+[node name="Descendente" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 286, 1, 58, 65 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Descendente" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Descendente/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.6592, -32.841, 8.42429, -11.6042, 14.2721, -0.831879, 22.8899, 3.47704, 29.3533, 12.7104, 26.5833, 25.3294, 17.6577, 30.5617, 10.5788, 30.2539, 7.80873, 23.1749, 3.4998, 17.9427, 4.42314, 12.0949, -3.88691, 15.4805, -7.88805, 6.86262, -13.1203, 2.24592, -11.5814, -3.6019, -20.507, -0.524101, -24.2004, -7.91082, -28.5093, -14.0664, -26.0471, -18.6831, -27.586, -25.7621, -22.3537, -30.9943 )
+
+[node name="Piso" type="Sprite" parent="." index="4"]
+
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 216, 75, 122, 44 )
+_sections_unfolded = [ "Region" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Piso" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Piso/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -53.3249, -10.2544, 49.4565, -9.87651, 61.5485, 2.21542, 58.5255, 16.9525, 48.3229, 22.2427, -53.3249, 22.2427, -59.3709, 9.39501, -58.2373, 4.10479, -60.5045, -1.18544, -55.97, -4.20842 )
+
+

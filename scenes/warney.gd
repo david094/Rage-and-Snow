@@ -1,5 +1,6 @@
 extends Node2D
 export (int) var dist_min
+export (PackedScene) var fireball
 
 onready var jugador = get_node("/root/Node2D/player")
 
@@ -16,6 +17,7 @@ func _physics_process(delta):
 	var attacks = [0, 1, 2]
 	var dir = jugador.position - self.position
 	if(sqrt(dir.x * dir.x + dir.y * dir.y) <= dist_min):
+		
 		pass
 
 #func _process(delta):

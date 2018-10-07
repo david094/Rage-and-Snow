@@ -2,19 +2,22 @@
 
 [ext_resource path="res://level_1.gd" type="Script" id=1]
 [ext_resource path="res://laval_floor.tscn" type="PackedScene" id=2]
-[ext_resource path="res://checkpoint.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icecream.png" type="Texture" id=4]
+[ext_resource path="res://scenes/checkpoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://images/icecream.png" type="Texture" id=4]
 [ext_resource path="res://floor_1.res" type="TileSet" id=5]
 [ext_resource path="res://audios/AUD-20180212-WA0000.ogg" type="AudioStream" id=6]
 [ext_resource path="res://player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://floor_2.res" type="TileSet" id=8]
 [ext_resource path="res://floor_4.res" type="TileSet" id=9]
-[ext_resource path="res://rotator.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/rotator.tscn" type="PackedScene" id=10]
 [ext_resource path="res://notGoomba.tscn" type="PackedScene" id=11]
 [ext_resource path="res://vertical_floor.res" type="TileSet" id=12]
 [ext_resource path="res://scenes/warney.tscn" type="PackedScene" id=13]
 
-[node name="Node2D" type="Node2D"]
+
+
+
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 

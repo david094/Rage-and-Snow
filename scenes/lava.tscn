@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/lava_tiles/lava_spr_strip45(1).png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+uniform int frame_size;
+uniform int frames;
+uniform float anim_time;
+
+void fragment(){
+	ivec2 texsize = textureSize(TEXTURE,0);
+	float uv_frame_size = float(frame_size) / float(texsize.x);
+	float frame_time = anim_time / float(frames);
+	float time = mod(TIME, anim_time);
+	float frame = floor(time / frame_time);
+
+	vec2 uv = vec2(UV.x + (uv_frame_size*frame), UV.y);
+	COLOR = texture(TEXTURE, uv);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/frame_size = 16
+shader_param/frames = 45
+shader_param/anim_time = 10.0
+_sections_unfolded = [ "shader_param" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Material" ]
+
+

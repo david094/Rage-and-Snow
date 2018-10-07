@@ -28,6 +28,7 @@ height = 16.6667
 
 script = ExtResource( 1 )
 dist_min = 400
+fireball = null
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
