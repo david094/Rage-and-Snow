@@ -16,6 +16,7 @@ onready var jugador = get_node("/root/Node2D/player")
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	set_meta("goomba",true)
 	pass
 
 func _process(delta):

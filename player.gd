@@ -16,6 +16,7 @@ var dir = Vector2(1,0)
 var checkpoint = null
 
 func _ready():
+	set_meta("player",true)
 	pass
 
 func _input(event):
