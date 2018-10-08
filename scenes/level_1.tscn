@@ -124,7 +124,6 @@ vel = 25
 
 [node name="LavaTiles" type="TileMap" parent="." index="10"]
 
-editor/display_folded = true
 mode = 0
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 16, 16 )
@@ -160,6 +159,29 @@ script = ExtResource( 7 )
 position = Vector2( 2209.33, 495.937 )
 scale = Vector2( 1.00728, 7.33712 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LavaTiles/Area2D" index="1"]
+
+position = Vector2( 5105, 845 )
+scale = Vector2( 1.49325, 9.54401 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LavaTiles/Area2D" index="2"]
+
+position = Vector2( 6460, 625 )
+scale = Vector2( 0.64457, 3.18134 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LavaTiles/Area2D" index="3"]
+
+position = Vector2( 7525, 340 )
+scale = Vector2( 1.10651, 6.36267 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LavaTiles/Area2D" index="4"]
+
+build_mode = 0
+polygon = PoolVector2Array( 8030, 260, 8030, 240, 8050, 240, 8050, 220, 8060, 220, 8060, 220, 8060, 190, 8290, -80, 8340, -80, 8340, -20, 8040, 350 )
 
 [node name="rotator" parent="." index="11" instance=ExtResource( 8 )]
 
@@ -290,7 +312,7 @@ position = Vector2( 9732.98, -575.429 )
 
 [node name="player" parent="." index="33" instance=ExtResource( 12 )]
 
-position = Vector2( 9135.95, -798.423 )
+position = Vector2( 7850, -110 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 bola_up = NodePath("up")
@@ -313,7 +335,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="LavaSignal" type="Area2D" parent="." index="36"]
 
-editor/display_folded = true
 position = Vector2( 8556.19, -125.627 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

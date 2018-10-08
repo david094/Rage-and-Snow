@@ -29,7 +29,7 @@ shader_param/frames = 45
 shader_param/anim_time = 10.0
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
