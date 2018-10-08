@@ -28,7 +28,7 @@ func _physics_process(delta):
 			
 
 func activate(body):
-	if (body.has_meta("goomba") && body.congelado)|| body.has_meta("player"):
+	if (body.has_meta("goomba") && body.congelado) || body.has_meta("player"):
 		get_node(genericObject).activate()
 		$AnimatedSprite.play("pressed")
 
