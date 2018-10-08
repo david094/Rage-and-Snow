@@ -439,7 +439,7 @@ reset = false
 
 [node name="player" parent="." index="34" instance=ExtResource( 17 )]
 
-position = Vector2( 25.9313, 60.9513 )
+position = Vector2( 12.8795, 13.3082 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 bola_up = NodePath("up")
@@ -483,5 +483,9 @@ shape = SubResource( 2 )
 position = Vector2( 9659.62, -595.848 )
 scale = Vector2( 0.8, 0.8 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="checkpoint" parent="Warney" index="1" instance=ExtResource( 14 )]
+
+position = Vector2( -3485.32, 1045.02 )
 
 

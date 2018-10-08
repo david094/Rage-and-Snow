@@ -19,6 +19,8 @@ func _ready():
 	# Initialization here
 	timer_bola = intervalo_bola
 	$Area2D.connect("body_entered", self, "warney_danger")
+	jugador.connect("reset", self, "heal")
+	
 	pass
 
 func _physics_process(delta):
@@ -58,3 +60,6 @@ func warney_danger(body):
 		vida -= 1
 		body.get_parent().remove_child(body)
 	
+func heal():
+	if vida < 250:
+		vida += 25

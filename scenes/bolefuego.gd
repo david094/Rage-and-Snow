@@ -19,7 +19,7 @@ func _process(delta):
 		if obj.has_method("reset_to_checkpoint"):
 			obj.reset_to_checkpoint()
 		elif obj.has_meta("bola"):
-			print("caca")
+			pass
 		else:
 			get_parent().remove_child(self)
 		
