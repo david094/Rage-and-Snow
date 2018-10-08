@@ -1,0 +1,319 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://font/alagard_by_pix3m-d6awiwp.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://images/giant-button-down.png" type="Texture" id=2]
+[ext_resource path="res://laval_floor.png" type="Texture" id=3]
+[ext_resource path="res://Snowdeth King F.png" type="Texture" id=4]
+[ext_resource path="res://columna_lava.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Warney Shooting.png" type="Texture" id=6]
+[ext_resource path="res://images/bola.png" type="Texture" id=7]
+[ext_resource path="res://images/floor_4.png" type="Texture" id=8]
+[ext_resource path="res://enemigo.png" type="Texture" id=9]
+[ext_resource path="res://images/ui_button.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 64
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends TextureButton
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	connect(\"button_up\", self, \"start_game\")
+	pass
+
+func start_game():
+	get_tree().change_scene(\"res://scenes/Main.tscn\")
+"
+
+[node name="HUD" type="CanvasLayer" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Label" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 84.0
+margin_top = -21.0
+margin_right = 560.0
+margin_bottom = 109.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Instructions"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect", "Visibility" ]
+
+[node name="Label2" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 18.0
+margin_top = 84.0
+margin_right = 2818.0
+margin_bottom = 1719.0
+rect_scale = Vector2( 0.22, 0.22 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Our Beloved Snowdeth King was captured and sent to hell
+help him as he tries to escape .
+
+Use ARROW KEYS to move
+Press SPACE to jump
+Press Z to pile up snow balls and X to shoot them
+
+SPAM YOUR WAY TO THE TOP
+Acumulate snowballs to reach platforms
+
+
+Shoot the rotating platforms to move them
+
+
+Freeze your enemies surrounding them with snow and use them to activate doors 
+or as platforms
+
+
+Hit lava columns with snowballs to make them decrease
+
+
+
+Be careful my Friend, the Dreadful Warney is waiting for you at the end
+
+"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Hint", "Margin", "Rect", "Visibility" ]
+
+[node name="giant-button-down" type="Sprite" parent="." index="2"]
+
+position = Vector2( 351.523, 328.052 )
+scale = Vector2( 0.280654, 0.344529 )
+texture = ExtResource( 2 )
+
+[node name="laval_floor" type="Sprite" parent="." index="3"]
+
+position = Vector2( 359.454, 228.871 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Snowdeth King F" type="Sprite" parent="." index="4"]
+
+position = Vector2( 462.743, 137.095 )
+scale = Vector2( 0.707782, 0.810679 )
+texture = ExtResource( 4 )
+
+[node name="columna_lava" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 557.934, 378.002 )
+rotation = -0.0244726
+scale = Vector2( 0.345936, 0.161419 )
+
+[node name="Warney Shooting" type="Sprite" parent="." index="6"]
+
+position = Vector2( 246.512, 428.896 )
+scale = Vector2( 0.650597, 0.71213 )
+texture = ExtResource( 6 )
+
+[node name="bola" type="Sprite" parent="." index="7"]
+
+position = Vector2( 268.309, 236.863 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola6" type="Sprite" parent="." index="8"]
+
+position = Vector2( 345.978, 267.522 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola7" type="Sprite" parent="." index="9"]
+
+position = Vector2( 321.73, 267.522 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola8" type="Sprite" parent="." index="10"]
+
+position = Vector2( 290.127, 319.017 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola11" type="Sprite" parent="." index="11"]
+
+position = Vector2( 298.489, 319.735 )
+scale = Vector2( 0.25, 0.231477 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola12" type="Sprite" parent="." index="12"]
+
+position = Vector2( 308.612, 323.696 )
+scale = Vector2( 0.25, 0.231477 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola13" type="Sprite" parent="." index="13"]
+
+position = Vector2( 307.732, 332.058 )
+scale = Vector2( 0.25, 0.231477 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola14" type="Sprite" parent="." index="14"]
+
+position = Vector2( 300.69, 268.24 )
+scale = Vector2( 0.25, 0.231477 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola10" type="Sprite" parent="." index="15"]
+
+position = Vector2( 282.645, 322.538 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola9" type="Sprite" parent="." index="16"]
+
+position = Vector2( 279.564, 330.9 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola2" type="Sprite" parent="." index="17"]
+
+position = Vector2( 284.564, 237.349 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola3" type="Sprite" parent="." index="18"]
+
+position = Vector2( 276.444, 236.309 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola4" type="Sprite" parent="." index="19"]
+
+position = Vector2( 279.903, 230.044 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="bola5" type="Sprite" parent="." index="20"]
+
+position = Vector2( 273.303, 229.708 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="floor_4" type="Sprite" parent="." index="21"]
+
+position = Vector2( 347.114, 274.831 )
+rotation = 1.23407
+scale = Vector2( 0.203055, 0.54241 )
+texture = ExtResource( 8 )
+
+[node name="enemigo" type="Sprite" parent="." index="22"]
+
+position = Vector2( 291.613, 332.868 )
+scale = Vector2( 0.415803, 0.434513 )
+texture = ExtResource( 9 )
+
+[node name="TextureButton" type="TextureButton" parent="." index="23"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 341.0
+margin_top = 421.0
+margin_right = 472.0
+margin_bottom = 461.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+script = SubResource( 2 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Label3" type="Label" parent="TextureButton" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = 2.0
+margin_right = 174.0
+margin_bottom = 62.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Back"
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Visibility" ]
+
+

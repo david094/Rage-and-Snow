@@ -21,7 +21,7 @@ func _physics_process(delta):
 				get_node(genericObject).activate()
 				$AnimatedSprite.play("pressed")
 				activado = true
-			elif (!body.congelado && activado):
+			elif (body.congelado == false && activado):
 				get_node(genericObject).deactivate()
 				$AnimatedSprite.play("normal")
 				activado = false

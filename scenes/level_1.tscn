@@ -439,7 +439,7 @@ reset = false
 
 [node name="player" parent="." index="34" instance=ExtResource( 17 )]
 
-position = Vector2( 52.9491, 56.6285 )
+position = Vector2( 25.9313, 60.9513 )
 scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Transform" ]
 bola_up = NodePath("up")
