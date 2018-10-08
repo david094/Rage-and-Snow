@@ -10,6 +10,8 @@ export (int) var vel_bola
 #shoot direction
 onready var dir_s = "r"
 onready var bola_pos = get_node(bola_der)
+onready var start_pos = get_global_position()
+signal reset
 
 var dir = Vector2(1,0)
 #checkpoint 
@@ -92,6 +94,9 @@ func _physics_process(delta):
 	
 #reset player to checkpoint
 func reset_to_checkpoint():
+	emit_signal("reset")
 	if checkpoint != null:
 		set_global_position(checkpoint.get_global_position())
+	else:
+		set_global_position(start_pos)
 	

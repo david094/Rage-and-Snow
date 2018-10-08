@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Warney Shooting.png-c7723968f5342576e2d03aa07b225ae8.stex"
+path="res://.import/Warney Shooting.png-81562634abb974c14b988c38fbf7f19c.stex"
 
 [deps]
 
-source_file="res://images/Warney Shooting.png"
-dest_files=[ "res://.import/Warney Shooting.png-c7723968f5342576e2d03aa07b225ae8.stex" ]
+source_file="res://Warney Shooting.png"
+dest_files=[ "res://.import/Warney Shooting.png-81562634abb974c14b988c38fbf7f19c.stex" ]
 
 [params]
 

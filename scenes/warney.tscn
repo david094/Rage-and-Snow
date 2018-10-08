@@ -1,41 +1,57 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/warney.gd" type="Script" id=1]
-[ext_resource path="res://images/Warney-Right.png" type="Texture" id=2]
-[ext_resource path="res://images/Warney.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Warney.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fireball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Warney-Right.png" type="Texture" id=3]
+[ext_resource path="res://images/Warney.png" type="Texture" id=4]
+[ext_resource path="res://images/Warney-Shooting UP 2.png" type="Texture" id=5]
+[ext_resource path="res://Warney Shooting.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "shoot",
+"speed": 3.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 16.6667
-height = 16.6667
+extents = Vector2( 35.574, 48.6635 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 49.2674, 51.8751 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
-script = ExtResource( 1 )
-dist_min = 400
-fireball = null
-
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
+script = ExtResource( 1 )
+dist_min = 250
+vel = 0
+gravedad = 100
+fireball = ExtResource( 2 )
+intervalo_bola = 4
+vida = 10
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
 
@@ -46,8 +62,29 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
 
-position = Vector2( 10, 40 )
-scale = Vector2( 2.26271, 2 )
+visible = false
+position = Vector2( 9.87334, 36.4885 )
 shape = SubResource( 2 )
+
+[node name="Timmy" type="Position2D" parent="KinematicBody2D" index="2"]
+
+position = Vector2( -49.3668, 35.2006 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="KinematicBody2D" index="3"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/Area2D" index="0"]
+
+position = Vector2( 9.76691, 35.2123 )
+shape = SubResource( 3 )
 
 

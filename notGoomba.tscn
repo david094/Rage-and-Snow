@@ -11,9 +11,9 @@ extents = Vector2( 50, 50 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 29.1393, 27.0124 )
+extents = Vector2( 28.3652, 26.8791 )
 
-[node name="notGoomba" type="KinematicBody2D"]
+[node name="notGoomba" type="KinematicBody2D" index="0"]
 
 scale = Vector2( 0.5, 0.5 )
 input_pickable = false
@@ -21,15 +21,17 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "collision" ]
 vida = 10
 defrost = 20.0
 dist_min = 300
 vel = 150
+gravedad = 100
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
 editor/display_folded = true
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -66,6 +68,7 @@ color = Color( 0.309204, 0.510433, 0.53125, 0 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( -10.7534, -27.8608, 0.35347, -23.3042, 12.5995, -23.0194, 14.7865, -29.7234, 25.5559, -24.2443, 28.7678, -18.0094, 25.178, -13.8528, 28.7678, -4.59489, 22.9108, 3.06388, 26.8785, 6.2758, 26.8785, 10.2435, 22.344, 13.2665, 10.0631, 12.1328, 6.28437, 8.73197, 1.56096, 13.0775, -8.83054, 14.7779, -14.4986, 10.9992, -12.7982, 1.74133, -19.7889, 4.95325, -26.9684, 0.796642, -29.0467, -10.1617, -27.1574, -16.9634, -24.3233, -18.8528, -19.0331, -11.8621, -19.7889, -0.903786, -15.0654, -1.4706, -17.8995, -9.40593, -18.0884, -17.9081, -19.411, -22.2536 )
 
@@ -83,7 +86,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areaAtaque" index="0"]
 
-position = Vector2( 1.11616, 3.67897 )
+position = Vector2( 0.113767, 5.8817 )
 shape = SubResource( 2 )
 
 

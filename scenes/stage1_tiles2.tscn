@@ -8,7 +8,7 @@ custom_solver_bias = 0.0
 radius = 14.2853
 height = 46.4188
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Dona Flotante" type="Sprite" parent="." index="0"]
 
@@ -36,6 +36,7 @@ polygon = PoolVector2Array( -40, -30, -30, -30, -30, -40, 20, -40, 30, -30, 40, 
 
 [node name="Caca" type="Sprite" parent="." index="1"]
 
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 353, 16, 31, 96 )
@@ -57,8 +58,6 @@ shape = SubResource( 1 )
 
 [node name="Ascendente" type="Sprite" parent="." index="2"]
 
-editor/display_folded = true
-visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 213, 1, 58, 65 )
@@ -74,11 +73,10 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ascendente/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ascendente/StaticBody2D" index="0"]
 
-position = Vector2( 0.274841, -0.924929 )
-rotation = 0.758265
-shape = SubResource( 1 )
+build_mode = 0
+polygon = PoolVector2Array( -19.7187, -0.0855713, -12.4788, -0.990559, -11.8, -8.90919, -6.14386, -14.5654, 5.84721, -17.9591, 4.03724, -23.6152, 8.33593, -28.1402, 16.4808, -33.1176, 25.0782, -25.199, 29.6031, -16.3753, 25.3044, -6.19423, 18.2908, -1.6693, 16.0283, -3.70552, 6.97845, 12.358, 1.54853, 14.168, -0.713936, 11.6793, -5.91761, 26.6115, -19.0966, 31.7287, -29.3776, 18.3635, -26.8073, 6.54033 )
 
 [node name="Descendente" type="Sprite" parent="." index="3"]
 

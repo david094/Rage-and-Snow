@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/lava_sube.gd" type="Script" id=1]
+[ext_resource path="res://lava_spr_strip45.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 500, 50.4477 )
+
+[node name="growing_lava" type="Node2D" index="0"]
+
+[node name="lava_sube" type="Area2D" parent="." index="0"]
+
+position = Vector2( -214.283, 118.83 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="lava_sube" index="0"]
+
+position = Vector2( -721.459, 411.081 )
+scale = Vector2( 2.91518, 4.19141 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, -100 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 500, 200 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lava_sube" index="1"]
+
+position = Vector2( -0.663422, 42.4591 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+

@@ -4,10 +4,10 @@
 [ext_resource path="res://images/bola.png" type="Texture" id=2]
 [ext_resource path="res://images/particula_bola.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 4.76213
+extents = Vector2( 4.71377, 4.90138 )
 
 [sub_resource type="Curve" id=2]
 
