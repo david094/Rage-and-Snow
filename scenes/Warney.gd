@@ -35,8 +35,9 @@ func _physics_process(delta):
 	move_and_slide(mov, Vector2(0,1))
 
 func _process(delta):
+	
 	timer_bola -= delta
-	if !($AnimatedSprite.is_playing()):
+	if not $AnimatedSprite.is_playing():
 		$AnimatedSprite.play("default")
 	if(timer_bola<=0):
 		timer_bola = intervalo_bola

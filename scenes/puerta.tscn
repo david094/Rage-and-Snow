@@ -8,9 +8,10 @@
 custom_solver_bias = 0.0
 extents = Vector2( 15.5023, 47.3557 )
 
-[node name="puerta" type="Node2D" index="0"]
+[node name="puerta" type="Node2D"]
 
 script = ExtResource( 1 )
+reset = true
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

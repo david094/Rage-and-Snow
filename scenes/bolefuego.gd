@@ -10,7 +10,6 @@ func _ready():
 
 func _physics_process(delta):
 	var mov = direction * vel
-	print(direction, mov)
 	move_and_slide(mov,Vector2(0,1))
 
 
