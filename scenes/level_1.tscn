@@ -297,6 +297,7 @@ genericObject = NodePath("../puerta3")
 [node name="puerta" parent="." index="29" instance=ExtResource( 11 )]
 
 position = Vector2( 3591.81, 421.81 )
+reset = false
 
 [node name="puerta2" parent="." index="30" instance=ExtResource( 11 )]
 
