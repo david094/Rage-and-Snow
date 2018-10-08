@@ -430,8 +430,7 @@ position = Vector2( 8520, -190 )
 
 [node name="puerta3" parent="." index="32" instance=ExtResource( 16 )]
 
-visible = false
-position = Vector2( 9042.63, -813.712 )
+position = Vector2( 9042.63, -815.039 )
 
 [node name="puerta_warney" parent="." index="33" instance=ExtResource( 16 )]
 
