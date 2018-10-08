@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 # class member variables go here, for example:
 # var a = 2
@@ -11,9 +11,4 @@ func _ready():
 	pass
 
 func start_game():
-	get_tree().change_scene("res://level_1.tscn")
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	get_tree().change_scene("res://scenes/level_1.tscn")

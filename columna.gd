@@ -36,4 +36,5 @@ func lava_burns(body):
 		body.reset_to_checkpoint()
 	elif (body.has_meta("bola")):
 		body.hide()
+		body.get_parent().remove_child(body)
 		get_parent().set_global_position(get_parent().get_global_position()+Vector2(0,5))

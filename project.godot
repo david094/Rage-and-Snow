@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Snowy the snowman in RDM"
-run/main_scene="res://scenes/level_1.tscn"
+run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [display]

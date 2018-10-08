@@ -44,6 +44,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Caca" index="0"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -54,10 +55,12 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Caca/StaticBody2D" index="0"]
 
+visible = false
 shape = SubResource( 1 )
 
 [node name="Ascendente" type="Sprite" parent="." index="2"]
 
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 213, 1, 58, 65 )
@@ -65,6 +68,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ascendente" index="0"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -75,13 +79,12 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ascendente/StaticBody2D" index="0"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( -19.7187, -0.0855713, -12.4788, -0.990559, -11.8, -8.90919, -6.14386, -14.5654, 5.84721, -17.9591, 4.03724, -23.6152, 8.33593, -28.1402, 16.4808, -33.1176, 25.0782, -25.199, 29.6031, -16.3753, 25.3044, -6.19423, 18.2908, -1.6693, 16.0283, -3.70552, 6.97845, 12.358, 1.54853, 14.168, -0.713936, 11.6793, -5.91761, 26.6115, -19.0966, 31.7287, -29.3776, 18.3635, -26.8073, 6.54033 )
 
 [node name="Descendente" type="Sprite" parent="." index="3"]
 
-editor/display_folded = true
-visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 286, 1, 58, 65 )
@@ -104,6 +107,7 @@ polygon = PoolVector2Array( -14.6592, -32.841, 8.42429, -11.6042, 14.2721, -0.83
 
 [node name="Piso" type="Sprite" parent="." index="4"]
 
+editor/display_folded = true
 visible = false
 texture = ExtResource( 1 )
 region_enabled = true
@@ -112,6 +116,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Piso" index="0"]
 
+visible = false
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -122,6 +127,7 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Piso/StaticBody2D" index="0"]
 
+visible = false
 build_mode = 0
 polygon = PoolVector2Array( -53.3249, -10.2544, 49.4565, -9.87651, 61.5485, 2.21542, 58.5255, 16.9525, 48.3229, 22.2427, -53.3249, 22.2427, -59.3709, 9.39501, -58.2373, 4.10479, -60.5045, -1.18544, -55.97, -4.20842 )
 

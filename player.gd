@@ -32,16 +32,17 @@ func _input(event):
 		dir_s = "l"
 	elif event.is_action_pressed("ui_right"):
 		dir_s = "r"
-		$SpriteDeth.play("Right")
 	elif event.is_action_pressed("ui_up"):
 		dir_s = "up"
 	
 
 func _process(delta):
 	if Input.is_action_pressed("ui_left"):
-			$SpriteDeth.play("Left")
+		$SpriteDeth.play("Left")
 	if Input.is_action_pressed("ui_right"):
-		$SpriteDeth.play("Right")	
+		$SpriteDeth.play("Right")
+	else:
+		$SpriteDeth.stop()
 
 func disparo():
 	
