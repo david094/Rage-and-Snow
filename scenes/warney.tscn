@@ -40,7 +40,6 @@ extents = Vector2( 49.2674, 51.8751 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -51,7 +50,7 @@ vel = 0
 gravedad = 100
 fireball = ExtResource( 2 )
 intervalo_bola = 4
-vida = 10
+vida = 40
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
 

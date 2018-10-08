@@ -8,7 +8,7 @@ func _ready():
 	pass
 
 func disparo(vel_bola,dir):
-	apply_impulse(Vector2(0,0),dir*vel_bola)
+	apply_impulse(Vector2(0,0), dir * vel_bola)
 	
 func _process(delta):
 	vida -= delta
